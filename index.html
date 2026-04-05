@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+/* falling hearts (FIXED) */
+.heart{
+  position:absolute;
+  top:-20px;
+  font-size:20px;
+  animation:fall 7s linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+.container{
+  background:rgba(255,255,255,0.96);
+  padding:45px 35px;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+  max-width:460px;
+  width:90%;
+  position:relative;
+}
+
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3.2rem;
+  color:#ff2e7a;
+  animation:glow 2.5s ease-in-out infinite alternate;
+}
+@keyframes glow{
+  from{ text-shadow:0 0 10px #ff6fa5; }
+  to{ text-shadow:0 0 25px #ff2e7a; }
+}
+
+button{
+  padding:14px 26px;
+  margin:10px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+#yes{ background:#ff2e7a; color:white; }
+#no{ position:absolute; background:#999; color:white; }
+
+.memory{ display:none; margin-top:15px; }
+.memory img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 20px rgba(255,46,122,0.9);
+}
+
+.forever{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#ff2e7a,#ff9a9e);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 1.5s ease;
+  z-index:1000;
+}
+.forever.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.forever-content{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  max-width:1100px;
+  padding:40px;
+}
+
+.forever-text{
+  color:white;
+  font-family:'Great Vibes',cursive;
+  font-size:2rem;
+  text-align:left;
+  max-width:500px;
+}
+
+.forever-photo img{
+  width:320px;
+  height:420px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(0,0,0,0.35);
+}
+
+.letter,.final,.signature{
+  display:none;
+  margin-top:18px;
+}
+
+#foreverBtn{
+  display:none;
+  margin-top:25px;
+  font-size:18px;
+  background:white;
+  color:#ff2e7a;
+  padding:12px 24px;
+  border-radius:12px;
+}
+
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:0.4s;
+  z-index:2000;
+}
+.popup.show{
+  opacity:1;
+  visibility:visible;
+}
+.popup-box{
+  background:white;
+  color:#ff2e7a;
+  padding:30px;
+  border-radius:20px;
+  font-size:1.5rem;
+  text-align:center;
+}
+
+.heart-area{
+  position:fixed;
+  right:0;
+  top:0;
+  width:40%;
+  height:100vh;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:1200;
+}
+
+.float-heart{
+  position:absolute;
+  font-size:20px;
+  opacity:0.9;
+  animation:fallPetal linear forwards;
+}
+
+@keyframes fallPetal{
+  0%{ transform:translateY(-10vh) rotate(0deg); opacity:0;}
+  15%{ opacity:1;}
+  100%{ transform:translateY(110vh) rotate(180deg); opacity:0;}
+}
+
+.final-photo{
+  position:fixed;
+  inset:0;
+  background:black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:1s;
+  z-index:3000;
+}
+.final-photo.show{
+  opacity:1;
+  visibility:visible;
+}
+.final-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="card">
+  <h1>Nanna 💖</h1>
+
+  <p>
+    Today is not just another day… it’s the day my favorite person was born. 🎂💖  
+    And somehow, the world got everything right the moment you came into it.
+
+    <br><br>
+
+    More than 5 beautiful years… and still my heart chooses you every single day.  
+    Across oceans, across time… my love always finds you. ❤️  
+
+    <br><br>
+
+    From the moment you came into my life, everything felt softer, brighter, and more meaningful.  
+    You are not just my love… you are my peace, my smile, and my favorite place in this world.  
+
+    <br><br>
+
+    The way you laugh when you’re truly happy… that’s still my favorite sound in the world.  
+    And every tomorrow I imagine… has you beside me. ✨  
+
+    <br><br>
+
+    So today is all about you… and a little surprise waiting for you. 🎁
+  </p>
+
+  <h2>Happy Birthday, My Love 🎂💖</h2>
+
+  <button id="yes" onclick="sayYes()">Open Your Surprise 🎁</button>
+  <button id="no" onmouseover="moveNo()">No 🙈</button>
+
+  <div class="memory" id="memory">
+    <img src="couple-photo.jpg" />
+    <p>Every year with you is a blessing… and I can’t wait to create many more. 💞</p>
+  </div>
+</div>
+
+<div class="heart-area" id="heartArea"></div>
+
+<div class="forever" id="forever">
+  <div class="forever-content">
+
+    <div class="forever-text">
+
+      <div class="top-line">
+        Another year of you… another year I’m grateful for loving you ❤️
+      </div>
+
+      <div class="letter" id="letter">
+        Dear Nanna…<br><br>
+        On your birthday, I just want you to know this…  
+        You are not just someone I love - you are someone I thank life for.  
+        <br><br>
+        Every smile of yours matters to me more than anything in this world.  
+        And no matter where life takes us… my heart will always stay with you.
+      </div>
+
+      <div class="final" id="final">
+        “And in every lifetime…<br>
+        I will still find my way back to you.” ✨
+      </div>
+
+      <div class="signature" id="signature">
+        Happy Birthday once again, my love 💖<br>
+        — Yours always ❤️
+      </div>
+
+      <button id="foreverBtn" onclick="showPopup()">Forever Yours 💖</button>
+
+    </div>
+
+    <div class="forever-photo">
+      <img src="couple-photo.jpg">
+    </div>
+
+  </div>
+</div>
+
+<div class="popup" id="popup" onclick="closePopup()">
+  <div class="popup-box">
+    Happy Birthday My Love 🎂💞<br><br>
+    You deserve the world… and more.<br>
+    <span style="font-size:14px">(tap anywhere)</span>
+  </div>
+</div>
+
+<div class="final-photo" id="finalPhoto" onclick="location.reload()">
+  <img src="couple-photo.jpg">
+</div>
+
+<script>
+let heartsStarted=false;
+
+function sayYes(){
+  document.getElementById("memory").style.display="block";
+  launchHearts();
+
+  setTimeout(()=>show("forever"),5000);
+  setTimeout(()=>show("letter"),9000);
+  setTimeout(()=>show("final"),14000);
+  setTimeout(()=>show("signature"),19000);
+  setTimeout(()=>document.getElementById("foreverBtn").style.display="inline-block",22000);
+}
+
+function show(id){
+  const el=document.getElementById(id);
+  el.classList.add("show");
+  el.style.display="block";
+
+  if(id==="forever" && !heartsStarted){
+    heartsStarted=true;
+    startRightHearts();
+  }
+}
+
+let noIndex=0;
+const noTexts=[
+  "No 🙈",
+  "Skip birthday surprise? 🎁",
+  "Are you sure? It's special 🥺",
+  "You might regret this 😏",
+  "It has something for you 💖",
+  "Just click once na 😄",
+  "Okay fine… but you'll miss it 😌"
+];
+
+function moveNo(){
+  const btn=document.getElementById("no");
+  const card=document.getElementById("card");
+
+  noIndex=(noIndex+1)%noTexts.length;
+  btn.innerText=noTexts[noIndex];
+
+  btn.style.transform = "scale(" + (1 + noIndex * 0.05) + ")";
+
+  const rect=card.getBoundingClientRect();
+  btn.style.left=Math.random()*(rect.width-120)+"px";
+  btn.style.top=Math.random()*(rect.height-60)+"px";
+}
+
+function launchHearts(){
+  for(let i=0;i<35;i++){
+    const h=document.createElement("div");
+    h.className="heart";   // <-- IMPORTANT
+    const emojis = ["❤️","💖","💘","💕"];
+h.innerHTML = emojis[Math.floor(Math.random()*emojis.length)];
+
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(5 + Math.random()*3) + "s";
+
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),8000);
+  }
+}
+
+function showPopup(){ document.getElementById("popup").classList.add("show"); }
+
+function closePopup(){
+  document.getElementById("popup").classList.remove("show");
+  document.getElementById("finalPhoto").classList.add("show");
+}
+
+function startRightHearts(){
+  const area=document.getElementById("heartArea");
+
+  setInterval(()=>{
+    const h=document.createElement("div");
+    h.className="float-heart";
+    h.innerHTML="🌹";
+    h.style.left=Math.random()*90+"%";
+    h.style.animationDuration=(5+Math.random()*4)+"s";
+
+    area.appendChild(h);
+    setTimeout(()=>h.remove(),9000);
+  },500);
+}
+</script>
+
+</body>
+</html>
